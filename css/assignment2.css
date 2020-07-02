@@ -1,0 +1,13 @@
+img{
+    height: 120px;
+    width: 120px;
+}
+
+#b{
+    text-decoration: underline;
+    color: #d83939;
+}
+
+#p1{
+    padding-left: 25px;
+}
