@@ -1,0 +1,48 @@
+body{
+    background-image: url("../imgs/laptop-asus-vivobook-x407ua-bv488t-i3-7020u-bg (1).jpg");
+    background-size: cover;/*kích cỡ ảnh nền*/
+}
+div{
+    background-color: #f0f0f0;
+    height: 1000px;
+    width: 1000px;
+    box-sizing: border-box;
+    margin: 60px 165px 0px 165px;
+}
+div > div{
+    background-color: #bac3cc;
+    height: 150px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+}
+div > div > div{
+    background-color: #e8e8e8;
+    height: 960px;
+    width: 250px;
+    float: left;
+    box-sizing: border-box;
+    margin: -100px 30px 20px 30px;
+    padding: 0 0px 0 30px;
+}
+img{
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    margin: 30px 25px 30px 30px;
+}
+p{
+    font-family: Calibri;
+}
+h1{
+    font-family: Calibri;
+}
+h2{
+    font-family: Calibri;
+}
+h3{
+    font-family: Calibri;
+}
+ul{
+    margin-left: 320px;
+}

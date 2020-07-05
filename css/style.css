@@ -1,0 +1,25 @@
+h1{
+    color:red ;
+    text-shadow: 5px 3px 5px darkgreen;/*bóng của chữ*/
+    font-size: 50px;
+}
+
+p{
+    line-height: 1.5;
+    text-align: center;
+    font-family: Aranea;
+    font-weight: bold;/*độ đậm nạt của chữ*//*100 200 300 400(normal) 500 600 700(bold) 800 900*/
+    text-decoration: underline;/*gạch chân*//*line-througnht gạch ngang*//*overline gạch trên*//*none mất gạch*/
+    text-indent: 50px;/*lùi dòng đầu tiên*/
+    word-spacing: 2px;/*khoang cahcs các chữ*/
+    text-transform: uppercase;/*viết hoa *//*none viết gì hiện đấy*/
+    text-transform: lowercase;/*viết thường */
+    text-transform: capitalize;/*hoa chữ cái đầu tiên */
+    background-color: gray;/*màu nền*/
+
+}
+body{
+    background-image: url("../imgs/abc.jpg");
+    background-repeat: repeat;/*lặp repeat-x repeat-y*/
+    background-size: cover;/*kích cỡ ảnh nền*/
+}
