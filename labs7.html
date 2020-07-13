@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/labs7.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d3fa3cecaa.js"></script>
+</head>
+<body>
+    <header class="section">
+        <div class="container">
+            <div class="left">
+                <form method="post" action="#">
+                    <div class="input-group">
+                        <h2>Billing Address</h2>
+                        <label><i class="fas fa-user"></i> Full Name<br/>
+                            <input type="text" class="input-text" name="fullname" placeholder="John M. Doe"/></label>
+                        <label><i class="fas fa-envelope"></i> Email<br/>
+                            <input type="email" class="input-text" name="email" placeholder="john@example.com"/></label>
+                        <label><i class="far fa-address-card"></i> Address<br/>
+                            <input type="text" class="input-text" name="address" placeholder="48 phố Viên"/></label>
+                        <label><i class="fas fa-university"></i> City<br/>
+                            <input type="text" class="input-text" name="city" placeholder="Hà Nội"/></label>
+                        <div class="group-left">
+                            <label> State<br/>
+                            <input type="text" class="input-text" name="state" placeholder="NY"/></label>
+                       </div>
+                        <div class="group-right">
+                            <label> Zip<br/>
+                                <input type="number" class="input-text" name="zip" placeholder="10001"/></label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <h2>Payment</h2>
+                        <label>
+                            Accepted Cards
+                        <br/>
+                        </label>
+                            <div>
+                                <i class="fab fa-cc-visa" style="color: #000362;font-size: 1.8em;margin: 30px 5px 25px 0"></i>
+                                <i class="fab fa-cc-amex" style="color: #0903e1;font-size: 1.8em;margin: 30px 5px 25px 0"></i>
+                                <i class="fab fa-cc-mastercard" style="color: #c9180e;font-size: 1.8em;margin: 30px 5px 25px 0"></i>
+                                <i class="fab fa-cc-discover" style="color: #f7a710;font-size: 1.8em;margin: 30px 5px 25px 0"></i>
+                            </div>
+
+                        <label>Name on Card<br/>
+                            <input type="text" class="input-text" name="namecard" placeholder="John More Doe"/></label>
+                        <label>Credit card number<br/>
+                            <input type="number" class="input-text" name="cardnumber" placeholder="1111-2222-3333-4444"/></label>
+                        <label>Exp Month<br/>
+                            <input type="text" class="input-text" name="month" placeholder="September"/></label>
+                        <div class="group-left">
+                            <label>Exp Year<br/>
+                                <input type="number" class="input-text" name="year" placeholder="2020"/></label>
+                        </div>
+                        <div class="group-right">
+                            <label>CVV<br/>
+                                <input type="number" class="input-text" name="cvv" placeholder="352"/></label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label><input type="checkbox" name="rules"/> Shipping address same as billing</label>
+                    </div>
+                    <button type="submit">Continue to checkout</button>
+                </form>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

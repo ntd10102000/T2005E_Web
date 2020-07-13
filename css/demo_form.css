@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    color: #343132;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+}
+.section{
+    float: left;
+    width: 100%;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+input[type=email]{
+    float: left;
+    width: 200px;
+    height: 35px;
+    margin: 10px 5px;
+    background-color: #d83939;
+}
+.input-text{
+    float: left;
+    width: 200px;
+    height: 35px;
+    margin: 10px 5px;
+    background-color: #343132;
+}
+.input-group{
+    float: left;
+    width: 100%;
+}
