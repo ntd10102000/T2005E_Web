@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Js</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // day la comment code
+        // cách 1: nhúng code js vào đây
+        // cách 2: dùng file ngoại vi(mẫu ở dưới)
+        // alert("Trang này đéo dành cho trẻ trâu dưới 18 tuổi") cảnh báo;
+        // confirm("Bạn có chắc chắn muốn đi tiếp");
+        // var r = Math.random()*100;
+        // r = parseInt(r);
+        // console.log(r);
+        // do{
+        //     var p = prompt("Nhập vào từ 0 -99"); //trả về chuỗi mà người dùng nhập vào, nếu cancle thì trả về null
+        //     p = parseInt(p);
+        //     console.log(p);
+        // }while (isNaN(p) || p>100 || p<0);
+        // if(p==r){
+        //     alert("Chuc mung ban da trung cái gì đấy");
+        // }else {
+        //     alert("chúc mừng năm mới")
+        // }
+        // setTimeout(function () {
+        //     do{
+        //         var p = prompt("Nhập vào  0(XỈU) hoặc 1(TÀI)"); //trả về chuỗi mà người dùng nhập vào, nếu cancle thì trả về null
+        //         p = parseInt(p);
+        //         console.log(p);
+        //     }while (isNaN(p) || p>1|| p<0);
+        //     var r = Math.random()*6+1;
+        //     r = parseInt(r);
+        //     console.log("sắc 1: "+r);
+        //     var i = Math.random()*6+1;
+        //     i = parseInt(i);
+        //     console.log("sắc 2: "+i);
+        //     var j = Math.random()*6+1;
+        //     j = parseInt(j);
+        //     console.log("sắc 3: "+j);
+        //     console.log("Tổng 3 sắc: " + (r + i +j));
+        //     if((r+i+j)>9 && p == 1){
+        //         alert("TÀI");
+        //     }else if((r+i+j)<10 && p == 0) {
+        //         alert("XỈU")
+        //     }else {
+        //         alert("Chúc mừng năm mới")
+        //     }
+        // },1000);//thời gian trễ
+        var stv = setInterval(function () {
+            do{
+                var p = prompt("Nhập vào  0(XỈU) hoặc 1(TÀI)"); //trả về chuỗi mà người dùng nhập vào, nếu cancle thì trả về null
+                p = parseInt(p);
+                console.log(p);
+            }while (isNaN(p) || p>1|| p<0);
+            var r = Math.random()*6+1;
+            r = parseInt(r);
+            console.log("sắc 1: "+r);
+            var i = Math.random()*6+1;
+            i = parseInt(i);
+            console.log("sắc 2: "+i);
+            var j = Math.random()*6+1;
+            j = parseInt(j);
+            console.log("sắc 3: "+j);
+            console.log("Tổng 3 sắc: " + (r + i +j));
+            if((r+i+j)>9 && p == 1){
+                alert("TÀI");
+                clearInterval(stv);
+            }else if((r+i+j)<10 && p == 0) {
+                alert("XỈU")
+                clearInterval(stv);
+            }else {
+                alert("Chúc mừng năm mới")
+            }
+        }, 3000)
+    </script>
+<!--    <script type="text/javascript" src="js/demojs_1.js"></script>-->
+</body>
+</html>

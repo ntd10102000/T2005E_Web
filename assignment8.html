@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 8</title>
+</head>
+<body>
+    <script type="text/javascript">
+        for (var i = 0; i<5; i++){
+            var p = [];
+            p[i] = prompt("Nhập vào số từ 0 - 99");
+            p[i] = parseInt(p[i]);
+            console.log(p[i]);
+        }
+        for (var i = 0; i<5; i++){
+            var r = [];
+            r[i] = Math.random()*99;
+            r[i] = parseInt(r[i]);
+            console.log(r[i]);
+        }
+        var dem;
+        for (var i = 0; i<5; i++){
+            for (var j = 0; i<5; i++){
+                if(p[i] = r[j]){
+                    dem ++;
+                }
+            }
+        }
+        setTimeout(function () {
+            if(dem==5){
+                alert("300 tỷ nè!");
+            }else {
+                alert("tưởng ăn được mà dễ à :v");
+            }
+        },5000)
+    </script>
+</body>
+</html>
