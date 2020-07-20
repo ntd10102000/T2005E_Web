@@ -11,13 +11,8 @@
 <h4 id="diachi">Địa chỉ: </h4>
 <h4 id="tenbangai">Tên bạn gái:</h4>
 <h3>Dưới đây là danh sách các vệ tinh của bạn gái:</h3>
-<ol>
-    <li id="vetinh"></li>
-    <li id="vetinh1"></li>
-    <li id="vetinh2"></li>
-    <li id="vetinh3"></li>
-    <li id="vetinh4"></li>
-    <li id="vetinh5"></li>
+<ol id="vetinh">
+
 </ol>
 <script type="text/javascript">
     var sv = {
@@ -139,12 +134,12 @@
     document.getElementById("telephone").innerText += " "+sv.tel;
     document.getElementById("diachi").innerText += " "+sv.address;
     document.getElementById("tenbangai").innerText += " "+sv.girlFriend.name;
-    document.getElementById("vetinh").innerText = sv.girlFriend.vetinh[0].name;
-    document.getElementById("vetinh1").innerText = sv.girlFriend.vetinh[1].name;
-    document.getElementById("vetinh2").innerText = sv.girlFriend.vetinh[2].name;
-    document.getElementById("vetinh3").innerText = sv.girlFriend.vetinh[3].name;
-    document.getElementById("vetinh4").innerText = sv.girlFriend.vetinh[4].name;
-    document.getElementById("vetinh5").innerText = sv.girlFriend.vetinh[5].name;
+    var vetinhs = sv.girlFriend.vetinh;
+    vetinhs.map(function (v) {
+        var li_html = "<li>"+v.name+"</li>"
+        document.getElementById("vetinh").innerHTML += li_html;
+    })
+
 </script>
 </body>
 </html>
