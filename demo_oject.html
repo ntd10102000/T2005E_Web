@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="sv-name"></h1>
+    <h2 id="msv"></h2>
+    <h3 id="tel">Đt: </h3>
+    <h4 id="diachi">ĐC: </h4>
+    <h4>Tên bạn gái:  </h4>
+    <h4>Danh sách các vệ tinh của bạn gái:  </h4>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script type="text/javascript">
+        var sinhVien = {
+            name: "Nguyễn Thị Na",
+            msv: "123456789",
+            tel: "0962681496",
+            address: "8 Tôn Thất Thuyết",
+            diChoi: function () {
+                console.log("đi Chơi");
+                return this;
+            },
+            ghen: function () {
+                console.log(this.name+" Bố mày đang ghen");
+                return this;
+            },
+            banGai: {
+                name: "No name",
+                tel: "0130650306",
+                address: "Đéo biết luôn",
+                nhanTin: function () {
+                    console.log("Nhắn tin");
+                    return this;
+                },
+                trangDiem: function () {
+                    console.log("Trang điểm");
+                    return this;
+                },
+                veTinh: [
+                    {
+                        name: "Name 1",
+                        tel: "061305303",
+                        car: "Mẹt xe đẹt",
+                        muaQua: function () {
+                            console.log("nhà vài tỷ");
+                        }
+                    },
+                    {
+                        name: "Name 2",
+                        tel: "061305303",
+                        car: "Mẹt xe đẹt",
+                        muaQua: function () {
+                            console.log("nhà vài tỷ");
+                        }
+                    },
+                     {
+                        name: "Name 3",
+                        tel: "061305303",
+                        car: "Mẹt xe đẹt",
+                        muaQua: function () {
+                            console.log("nhà vài tỷ");
+                        }
+                    },
+                     {
+                        name: "Name 4",
+                        tel: "061305303",
+                        car: "Mẹt xe đẹt",
+                        muaQua: function () {
+                            console.log("nhà vài tỷ");
+                        }
+                    },
+                     {
+                        name: "Name 5",
+                        tel: "061305303",
+                        car: "Mẹt xe đẹt",
+                        muaQua: function () {
+                            console.log("nhà vài tỷ");
+                        }
+                    }
+                ]
+            }
+        }
+        var h1 = document.getElementById("sv-name");
+        h1.innerText = sinhVien.name;
+        document.getElementById("msv").innerText = sinhVien.msv;
+        document.getElementById("tel").innerText += " "+sinhVien.tel;
+        document.getElementById("diachi").innerText += " "+sinhVien.address;
+    </script>
+</body>
+</html>

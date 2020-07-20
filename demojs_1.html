@@ -48,32 +48,63 @@
         //         alert("Chúc mừng năm mới")
         //     }
         // },1000);//thời gian trễ
-        var stv = setInterval(function () {
-            do{
-                var p = prompt("Nhập vào  0(XỈU) hoặc 1(TÀI)"); //trả về chuỗi mà người dùng nhập vào, nếu cancle thì trả về null
-                p = parseInt(p);
-                console.log(p);
-            }while (isNaN(p) || p>1|| p<0);
-            var r = Math.random()*6+1;
-            r = parseInt(r);
-            console.log("sắc 1: "+r);
-            var i = Math.random()*6+1;
-            i = parseInt(i);
-            console.log("sắc 2: "+i);
-            var j = Math.random()*6+1;
-            j = parseInt(j);
-            console.log("sắc 3: "+j);
-            console.log("Tổng 3 sắc: " + (r + i +j));
-            if((r+i+j)>9 && p == 1){
-                alert("TÀI");
-                clearInterval(stv);
-            }else if((r+i+j)<10 && p == 0) {
-                alert("XỈU")
-                clearInterval(stv);
-            }else {
-                alert("Chúc mừng năm mới")
+        // var stv = setInterval(function () {
+        //     do{
+        //         var p = prompt("Nhập vào  0(XỈU) hoặc 1(TÀI)"); //trả về chuỗi mà người dùng nhập vào, nếu cancle thì trả về null
+        //         p = parseInt(p);
+        //         console.log(p);
+        //     }while (isNaN(p) || p>1|| p<0);
+        //     var r = Math.random()*6+1;
+        //     r = parseInt(r);
+        //     console.log("sắc 1: "+r);
+        //     var i = Math.random()*6+1;
+        //     i = parseInt(i);
+        //     console.log("sắc 2: "+i);
+        //     var j = Math.random()*6+1;
+        //     j = parseInt(j);
+        //     console.log("sắc 3: "+j);
+        //     console.log("Tổng 3 sắc: " + (r + i +j));
+        //     if((r+i+j)>9 && p == 1){
+        //         alert("TÀI");
+        //         clearInterval(stv);
+        //     }else if((r+i+j)<10 && p == 0) {
+        //         alert("XỈU")
+        //         clearInterval(stv);
+        //     }else {
+        //         alert("Chúc mừng năm mới")
+        //     }
+        // }, 3000)
+        // chữa bài tập assngment 8
+        var randomNumber = [];
+        do{
+            var r = parseInt(Math.random()*99);
+            if(!randomNumber.includes(r,0)){
+                randomNumber.push(r);
             }
-        }, 3000)
+            console.log(r);
+        }while (randomNumber.length<5);
+        var chooseNumber = [];
+        do{
+            var c = prompt("Chon so may mắn thứ "+(chooseNumber.length+1));
+            c = parseInt(c);
+            if(!chooseNumber.includes(c,0)&&!isNaN(c)&&c>=0&&c<100){
+                chooseNumber.push(c);
+            }
+        }while (chooseNumber.length<5);
+        var count = 0;
+        chooseNumber.map(function (n) {
+            if(randomNumber.includes(n,0)){
+                count++;
+            }
+        })
+        if(count>=5){
+            alert("bạn đã trúng 100 tỷ");
+        }else if (count>=4){
+            alert("bạn đã trúng 30 tr");
+        }else{
+            alert("tưởng ăn đk mà dễ ak");
+        }
+
     </script>
 <!--    <script type="text/javascript" src="js/demojs_1.js"></script>-->
 </body>
