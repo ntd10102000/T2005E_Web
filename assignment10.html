@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 10</title>
+    <link rel="stylesheet" type="text/css" href="css/assignment10.css"/>
+    <script src="https://kit.fontawesome.com/d3fa3cecaa.js"></script>
+</head>
+<body>
+    <div class="section header">
+        <div class="container">
+            <div class="box" id="box">
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <div class="new">New</div>-->
+<!--                            <img class="img" src="imgs/assignment10/product-1.jpg"/>-->
+<!--                            <img class="img1" src="imgs/assignment10/product-1.jpg"/>-->
+<!--                        </div>-->
+<!--                        <div class="name">-->
+<!--                            <h3>STUDIO DISIGN</h3>-->
+<!--                            <h4>Juicy Couture Juicy Quilted T..</h4>-->
+<!--                            <p>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                            </p>-->
+<!--                            <ul>-->
+<!--                                <li>$18.90</li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                        <div class="hover">-->
+<!--                            <a href="#" class="text">ADD TO CART</a>-->
+<!--                            <i class="far fa-heart"></i>-->
+<!--                            <i class="fas fa-random"></i>-->
+<!--                        </div>-->
+<!--                        <a href="#">-->
+<!--                            <div class="search">-->
+<!--                                <i class="fas fa-search"></i>-->
+<!--                            </div>-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </a>-->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var foods = [
+            {
+                image:"imgs/assignment10/product-1.jpg",
+                image1:"imgs/assignment10/product-1.jpg",
+                species:"STUDIO DISIGN",
+                name:"Juicy Couture Juicy Quilted T..",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-2.jpg",
+                image1:"imgs/assignment10/product-15.jpg",
+                species:"STUDIO DISIGN",
+                name:"New Balance Fresh Foam Ka..",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-3.jpg",
+                image1:"imgs/assignment10/product-4.jpg",
+                species:"GRAPHIC CORNER",
+                name:"Brixton Patrol All Terrain..",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-5.jpg",
+                image1:"imgs/assignment10/product-5.jpg",
+                species:"GRAPHIC CORNER",
+                name:"Juicy Couture Tricot Logo S..",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-6.jpg",
+                image1:"imgs/assignment10/product-6.jpg",
+                species:"STUDIO DISIGN",
+                name:"New Balance Arishi Sport v1",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-7.jpg",
+                image1:"imgs/assignment10/product-8.jpg",
+                species:"GRAPHIC CORNER",
+                name:"Fila Locker Room Varsit...",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-9.jpg",
+                image1:"imgs/assignment10/product-9.jpg",
+                species:"STUDIO DISIGN",
+                name:"Water and Wind Resista..",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-10.jpg",
+                image1:"imgs/assignment10/product-10.jpg",
+                species:"STUDIO DISIGN",
+                name:"New Luxury Men's Slim Fi...",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-11.jpg",
+                image1:"imgs/assignment10/product-12.jpg",
+                species:"STUDIO DISIGN",
+                name:"Originals Kaval Win...",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-4.jpg",
+                image1:"imgs/assignment10/product-3.jpg",
+                species:"STUDIO DISIGN",
+                name:"Brixton Patrol All Terra...",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-14.jpg",
+                image1:"imgs/assignment10/product-14.jpg",
+                species:"STUDIO DISIGN",
+                name:"Madden by Steve Madden C...",
+                price:"$18.90"
+            },
+            {
+                image:"imgs/assignment10/product-15.jpg",
+                image1:"imgs/assignment10/product-2.jpg",
+                species:"STUDIO DISIGN",
+                name:"Juicy Couture Juicy Quilted T..",
+                price:"$18.90"
+            },
+        ]
+        var items = foods;
+        items.map(function (i) {
+            var box_html = " <a href=\"#\">\n" +
+                "                    <div class=\"item\">\n" +
+                "                        <div class=\"img\">\n" +
+                "                            <div class=\"new\">New</div>\n" +
+                "                            <img class=\"img\" src=\""+i.image+"\"/>\n" +
+                "                            <img class=\"img1\" src=\""+i.image1+"\"/>\n" +
+                "                        </div>\n" +
+                "                        <div class=\"name\">\n" +
+                "                            <h3>"+i.species+"</h3>\n" +
+                "                            <h4>"+i.name+"</h4>\n" +
+                "                            <p>\n" +
+                "                                <i class=\"fas fa-star\"></i>\n" +
+                "                                <i class=\"fas fa-star\"></i>\n" +
+                "                                <i class=\"fas fa-star\"></i>\n" +
+                "                                <i class=\"fas fa-star\"></i>\n" +
+                "                                <i class=\"fas fa-star\"></i>\n" +
+                "                            </p>\n" +
+                "                            <ul>\n" +
+                "                                <li>"+i.price+"</li>\n" +
+                "                            </ul>\n" +
+                "                        </div>\n" +
+                "                        <div class=\"hover\">\n" +
+                "                            <a href=\"#\" class=\"text\">ADD TO CART</a>\n" +
+                "                            <i class=\"far fa-heart\"></i>\n" +
+                "                            <i class=\"fas fa-random\"></i>\n" +
+                "                        </div>\n" +
+                "                        <a href=\"#\">\n" +
+                "                            <div class=\"search\">\n" +
+                "                                <i class=\"fas fa-search\"></i>\n" +
+                "                            </div>\n" +
+                "                        </a>\n" +
+                "                    </div>\n" +
+                "                </a>";
+            document.getElementById("box").innerHTML += box_html;
+        })
+    </script>
+</body>
+</html>

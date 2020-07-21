@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab S10</title>
+    <link rel="stylesheet" type="text/css" href="css/labs10.css"/>
+</head>
+<body>
+    <div class="section header">
+        <div class="container">
+            <div class="box" id="box">
+<!--                <a href="#" id="a">-->
+<!--                    <div class="item" id="item">-->
+<!--                        <div class="img" id="img">-->
+<!--                            <img src="imgs/fptshop/dien-thoai.png"/>-->
+<!--                        </div>-->
+<!--                        <p id="p">Điện Thoại</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/laptop.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Laptop</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/apple.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Apple</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/tablet.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Máy tính bảng</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/smart-watch.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Đồng hồ thông minh</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/op-lung.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Ốp lưng điện thoại</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/tai-nghe.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Tai nghe</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/the-nho.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Thẻ nhớ</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/loa-nghe-nhac.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Loa nghe nhạc</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/cap-sac.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Sạc-cáp</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/may-tinh-de-ban.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Máy tính để bàn</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--                <a href="#">-->
+<!--                    <div class="item">-->
+<!--                        <div class="img">-->
+<!--                            <img src="imgs/fptshop/may-in.png"/>-->
+<!--                        </div>-->
+<!--                        <p>Máy in</p>-->
+<!--                    </div>-->
+<!--                </a>-->
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var cats = [
+            {
+                name:"Điện Thoại",
+                image:"imgs/fptshop/dien-thoai.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Laptop",
+                image:"imgs/fptshop/laptop.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Apple",
+                image:"imgs/fptshop/apple.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Máy tính bảng",
+                image:"imgs/fptshop/tablet.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Đồng hồ thông minh",
+                image:"imgs/fptshop/smart-watch.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Ốp lưng điện thoại",
+                image:"imgs/fptshop/op-lung.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Tai nghe",
+                image:"imgs/fptshop/tai-nghe.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Thẻ nhớ",
+                image:"imgs/fptshop/the-nho.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Loa nghe nhạc",
+                image:"imgs/fptshop/loa-nghe-nhac.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Sạc cáp",
+                image:"imgs/fptshop/cap-sac.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Máy tính để bàn",
+                image:"imgs/fptshop/may-tinh-de-ban.png",
+                link:"dienthoai.html"
+            },
+            {
+                name:"Máy in",
+                image:"imgs/fptshop/may-in.png",
+                link:"dienthoai.html"
+            },
+        ]
+        var items = cats;
+        items.map(function (i) {
+            var box_html = "<a href='"+i.link+"'><div class='item'><div class='img'><img src="+i.image+"></div><p>"+i.name+"</p></div></a>";
+            document.getElementById("box").innerHTML += box_html;
+        })
+    </script>
+</body>
+</html>
