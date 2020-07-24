@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Event</title>
+    <link rel="stylesheet"  href="css/demo_evnet.css">
+</head>
+<body>
+    <button type="button" onclick="ok()">Ố Cê</button>
+    <div class="box" ondblclick="dbC(this)" id="box" onmouseenter="green(this)" onmouseleave="red(this)"></div>
+    <p oncopy="abc()" oncut="abc()" onpaste="abc()">Theo số liệu đến từ Rec Sport Soccer Statistics Foundation (RSSSF), Ronaldo đã ghi tổng cộng 734 bàn thắng trong sự nghiệp. Kỷ lục chói lọi giúp chân sút 35 tuổi chính thức vươn lên vị trí thứ 2 trong danh sách những tay làm bàn vĩ đại nhất mọi thời đại.
+
+        Cụ thể, Ronaldo đã bắt kịp Romario trong danh sách và bỏ lại những cái tên phía sau Gerd Muller (720), Lionel Messi (716) và Ferenc Puskas (70)… Tuy nhiên, huyền thoại Pele vẫn đang là người dẫn đầu với 767 bàn thắng.
+
+        Pele chính là người đã giúp ĐT Brazil 3 lần vô địch World Cup các năm 1958, 1962 và 1970. Trong cả sự nghiệp, 767 bàn thắng của ông được ghi ở 831 trận từ năm 1956 đến 1977. Tỷ lệ ghi bàn là 0,92 bàn/trận. Xét về phương diện thành tích cấp CLB, Pele còn giúp CLB Santos 6 lần vô
+        địch Campeonato Brasileiro Série A, 2 lần vô địch Copa Libertadores cùng 17 danh hiệu lớn nhỏ khác.</p>
+    <input type="text" name="demo" onkeydown="showKB(this)" onkeyup="showKU(this)" onkeypress="showKP(this)"/>
+    <select name="sex" onchange="gender(this)">
+        <option value="male">Male</option>
+        <option value="female">Male</option>
+        <option value="other">Other</option>
+    </select>
+    <form action="#" method="get">
+        <input name="email" type="email" placeholder="email">
+        <button type="button" onclick="return confirm('chawcs vhawns chuaw?')">Submlit</button>
+    </form>
+
+    <script type="text/javascript">
+        function ok(e) {
+            alert("Hello Word");
+        }
+        function red(e) {
+            document.getElementById("box").style.backgroundColor = "red";
+        }
+        function green(e) {
+            document.getElementById("box").style.backgroundColor = "green";
+        }
+        function dbC(e) {
+            document.getElementById("box").style.backgroundColor = "black";
+        }
+        function abc() {
+            alert("abc");
+        }
+    </script>
+    <script type="text/javascript">
+        function gender(e) {
+            var v = e.value;
+            console.log(v);
+        }
+        function showKB(e) {
+            var v = e.value;
+            console.log(v);
+            console.log("xyz");
+        }
+        function showKU(e) {
+            var v = e.value;
+            var kc = event.keyCode;
+            console.log(kc);
+            if(kc == 13){
+                console.log(v);
+            }
+            // console.log(v);
+            // console.log("xyz");
+        }
+        function showKP(e) {
+            var v = e.value;
+            console.log(v);
+        }
+    </script>
+</body>
+</html>
