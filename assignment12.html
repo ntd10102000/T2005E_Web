@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 12</title>
+    <link href="css/assignment12.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<header class="section header">
+    <div class="container">
+        <div class="time">
+            <div class="min">
+                <div class="min_contant">
+                    <img src="imgs/second.png"/>
+                </div>
+            </div>
+            <div class="sec">
+                <div class="sec_contant">
+                    <img src="imgs/minute.png"/>
+                </div>
+            </div>
+            <div class="hour">
+                <div class="hour_contant">
+                    <img src="imgs/hour.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script type="text/javascript">
+    var min = 0;
+    var sec = 0;
+    var hour = 0;
+    var dem = 0;
+    var dem1 = 0;
+    setInterval(function () {
+        min+=6;
+        $(".min").css({
+            "transform": "rotate("+min+"deg)",
+        })
+        dem++;
+        if(dem==60){
+            sec+=6;
+            $(".sec").css({
+                "transform": "rotate("+sec+"deg)",
+            })
+            dem = 0;
+            dem1++;
+        }
+        if(dem1==12){
+            hour+=6;
+            $(".hour").css({
+                "transform": "rotate("+hour+"deg)",
+            })
+            dem1 = 0;
+        }
+    } ,10)
+</script>
+</body>
+</html>

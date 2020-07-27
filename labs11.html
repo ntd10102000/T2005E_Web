@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="menu">
-            <button type="button" onclick="an(this, 'home')">
+            <button type="button" class="active" onclick="an(this, 'home')">
                 Home
             </button>
             <button type="button" onclick="an(this, 'profile')">
@@ -20,7 +20,7 @@
                 Settings
             </button>
     </div>
-    <div id="home" class="tab">
+    <div id="home" class="tab active">
         <p>This is Home content</p>
     </div>
 
@@ -34,13 +34,17 @@
         <p>This is Settings content</p>
     </div>
     <script type="text/javascript">
-        var b = document.getElementsByTagName("button");
-        var p = document.getElementsByClassName("tab");
-        function an(e, id) {
-            for (var e of p){
-                e.style.display = "none";
+        function an(e,idName) {
+            var li = document.getElementsByTagName("button");
+            var content = document.getElementsByClassName("tab");
+            for(var i of li){
+                i.classList.remove("active");
             }
-            document.getElementById(id).style.display = "block";
+            for(var i of content){
+                i.classList.remove("active");
+            }
+            e.classList.add("active");
+            document.getElementById(idName).classList.add("active");
         }
     </script>
 </body>

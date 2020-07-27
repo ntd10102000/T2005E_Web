@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo jQuery</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+    <input type="number" name="minute"><br/>
+    <button onclick="BOXon()">ON</button>
+    <button onclick="BOXof()">Of</button>
+    <button onclick="onof()">OnOf</button>
+    <button onclick="move()">MoVe</button>
+    <div class="box">
+        <h1 id="heading">Tiêu ĐỀ jQuery</h1>
+        <h2>Tác giả: ???????</h2>
+        <p class="pg">asdmascmkmdc,da vjkjdvjsnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnj</p>
+        <p class="pg">asdmascmkmdc,da vjkjdvjsnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnj</p>
+    </div>
+    <script type="text/javascript">
+        var h = $("#heading");
+        h.css("color", "red");
+        h.css({
+            "color":"green",
+            "background-color":"orange",
+        });
+        h.text("Ố cê");
+        h.html("<b>khì khì</b>");
+        h.html(h.html() + "<i>ádsauhafishn</i>");
+        h.append("<i>Hádsjafncaskmc</i>");//thêm vào đuôi
+        h.prepend("<b>dsadaoda</b>")//thêm vào trước
+        h.addClass("actice");
+        h.removeClass("abc");
+        var pg = $(".pg");
+        pg.css("color", "orange");
+
+    </script>
+    <script type="text/javascript">
+        function BOXon() {
+            var box = $(".box");
+            //box.show();
+            //box.fadeIn();
+            //box.slideDown();
+        }
+        function BOXof() {
+            var box = $(".box");
+            //box.hide();
+            //box.fadeOut();
+            //box.slideUp();
+        }
+        function onof() {
+            var box = $(".box");
+            //box.toggle();
+            //box.fadeToggle();
+            box.slideToggle();
+        }
+        function move() {
+            var box = $(".box");
+            var m = $("input[name=minute]").val();
+            m = parseInt(m);
+            m = isNaN(m)?0:m;
+            box.animate({
+                "margin-left": m*20+"px",
+                "margin-top": m*20+"px",
+            }, 400);
+        }
+    </script>
+
+</body>
+</html>
