@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Ajax</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1>City, Cou</h1>
+            <h2 class="temp">Temp</h2>
+            <h3 class="min">mIN....</h3>
+            <h3 class="max">Max.....</h3>
+            <h3 class="press">Press</h3>
+            <h3 class="hum">HUm</h3>
+            <h3 class="de">....</h3>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $.ajax({
+            url:"http://api.openweathermap.org/data/2.5/weather",
+            method:"GET",
+            data:{
+                q:"London,uk",
+                appid:"09a71427c59d38d6a34f89b47d75975c",
+                units:"metric"
+            },
+            success: function (rs) {
+                $("h1").text(rs.name+","+rs.sys.country);
+                $(".temp").html(rs.main.temp+"<sup>o</sup>C");
+                $(".min").html(rs.main.temp_min+"<sup>o</sup>C");
+                $(".max").html(rs.main.temp_max+"<sup>o</sup>C");
+                $(".press").html(rs.main.pressure+"<sup>o</sup>C");
+                $(".hum").html(rs.main.humidity+"<sup>o</sup>C");
+                for (var e of rs.weather){
+                    $(".de").append("<p>"+e.description+"</p>");
+                }
+            }
+        })
+    </script>
+</body>
+</html>
