@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="lbs/bootstrap3.3.7/css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="lbs/bootstrap3.3.7/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="lbs/nivoslider/themes/default/default.css">
+    <link rel="stylesheet" href="lbs/nivoslider/nivo-slider.css">
+    <script type="text/javascript" src="lbs/nivoslider/jquery.nivo.slider.js"></script>
+
+</head>
+<body>
+<div class="section">
+    <div class="container theme-default">
+        <div id="slider" class="nivoSlider">
+            <img src="imgs/toystory.jpg" data-thumb="images/toystory.jpg" alt="" />
+            <img src="imgs/up.jpg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" />
+            <img src="imgs/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
+            <img src="imgs/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />
+        </div>
+    </div>
+</div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="map" style="width: 800px;height: 400px;"></div>
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        var uluru = {lat: 21, lng: 105};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 15, center: uluru});
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map, label: {
+            text:"t2005e",
+            color:"red",
+            }});
+    }
+</script>
+<!--Load the API from the specified URL
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter will contain your own API key (which is not needed for this tutorial)
+* The callback parameter executes the initMap() function
+-->
+<script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaj0mHlR-keu-9hsR6d-gB0L9BclG04rk&callback=initMap"></script>
+<script type="text/javascript">
+    $('#slider').nivoSlider();
+</script>
+</body>
+</html>
