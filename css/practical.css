@@ -28,6 +28,7 @@ body{
     background-image: url("../imgs/menu.jpg");
     background-size: cover;
     height: 180px;
+    border-bottom: 1px solid #5c5731;
 }
 .menu{
     float: right;
@@ -74,10 +75,22 @@ body{
     height: 500px;
     background-color: #6e6943;
     margin-top: -1px;
+    float: left;
+    padding-left: 20px;
 }
 .left_1{
     width: 100%;
     border-right: 1px solid #5c5731;
     height: 500px;
     background-color: #6e6943;
+    padding-right: 50px;
+    color: #272006;
+}
+.right{
+    padding-top: 20px;
+    width: 32.5%;
+    height: 500px;
+    float: left;
+    background-color: #6e6943;
+    margin-top: -1px;
 }
