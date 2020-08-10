@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    color: #343132;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+}
+.section{
+    float: left;
+    width: 100%;
+    padding: 0;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*header*/
+.header{
+    border-bottom: 1px solid #eeeeee;
+}
+.head{
+    float: right;
+    width: 100%;
+    background-image: url("../imgs/menu.jpg");
+    background-size: cover;
+    height: 180px;
+}
+.menu{
+    float: right;
+    margin-top: 40px;
+    margin-right: 140px;
+}
+.menu li{
+    float: left;
+    margin-left: 35px;
+    color: #c4bd90;
+    list-style: none;
+}
+.menu li a{
+    font-size: 20px;
+    color: #c4bd90;
+    transition: all 150ms;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 800;
+}
+.menu li a:hover{
+    color: #343132;
+}
+.h1{
+    width: 20%;
+    float: left;
+    margin-left: 380px;
+    margin-top: 68px;
+    color: #272006;
+    font-weight: 800;
+    border-bottom: 1px solid #5c5731;
+}
+.h2{
+    width: 20%;
+    float: left;
+    margin-top: 68px;
+    margin-left: 280px;
+    color: #272006;
+    font-weight: 800;
+}
+.left{
+    padding-top: 20px;
+    width: 67.5%;
+    height: 500px;
+    background-color: #6e6943;
+    margin-top: -1px;
+}
+.left_1{
+    width: 100%;
+    border-right: 1px solid #5c5731;
+    height: 500px;
+    background-color: #6e6943;
+}
